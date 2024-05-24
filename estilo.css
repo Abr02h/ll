@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+}
+    
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header{
+    font-family: fote;
+    background:  rgb(255, 230, 0); 
+    text-align: center;
+    padding: 20px;
+    color: #0f0f0f;
+}
+h3{
+    font-size: 3.1rem;
+    margin-bottom: 1.4rem;
+  }
+.navbar{
+  position: sticky;
+   top: 0;
+   display: flex;
+   justify-content: center;
+   background: #0f0f0f;
+}
+.navbar a{
+    padding: 14px 20px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-align: center;
+}
+nav ul {
+    list-style-type: none;
+}
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.introducao{
+    padding: 0.1rem;
+    font-size: 1.5rem;
+    background-color:#f3f3f3;
+  }
+  /*estilo para o corpo da pagina principal*/
+.corpo{
+    display: flex;
+    flex-flow: row wrap;
+}
+.card{
+    flex: 48%;
+    background: #f3f3f3;
+    margin: 1%;
+    height: 500px;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/*Estilo para links das paginas*/
+a:hover{
+    background: grey;
+    font-weight: bolder;
+    border-radius:2px;
+}
+a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/*Estilo para barra de pesquisa*/
+.search-container {
+    position: relative;
+    width: 200px;
+    
+  }
+  .search-container img{
+    width: 30px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  #searchBtn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Título da página -->
+        <title>Leitura Livre</title>
+        <!-- Link para o arquivo de estilos-->
+        <link rel="stylesheet" href="estilo.css">
+        <style>
+            /* Estilos para o slideshow */
+.slideshow-container {
+    text-align: center;
+    flex: 100%;
+    background: #f3f3f3;
+    height: 400px;
+}
+.slide {
+    display: none;
+    max-height: 400px;
+}
+img {
+    width: auto;
+    max-height: 300px;
+    text-align: center;
+    border-radius: 4px;
+}
+        </style>
+    </head>
+    <body>
+        <!-- Cabeçalho -->
+        <header class="header">
+            <h1>Leitura Livre
+            <div class="search-container">
+                <input type="text" id="searchInput" style="display:none;" placeholder="Pesquisar...">
+                <button id="searchBtn"><img src="imagens/pe.png" alt="pesquisar"></button>
+                <button type="submit" id="submitBtn" style="  background-color:grey; color:white;font-size: medium;border-radius: 5px;padding: 0.4rem; display: none;">buscar</button>
+                <a href="formulario1.html"><img src="imagens/for.png"></a>
+            </div></h1>
+        </header>
+        <nav class="navbar">
+                <ul>
+                    <!-- Links para páginas do site -->
+                    <li><a href="index.html">Página Inicial</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="formulario.html">Login</a></li>
+                </ul>
+        </nav>
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <img src="imagens/slide1.jpg" alt="Slide 1">
+            </div>
+            <div class="slide fade">
+                <img src="imagens/slide2.jpg"alt="Slide 2">
+            </div>
+            <div class="slide fade">
+                <img src="imagens/slide3.jpg" alt="Slide 3">
+            </div>
+        </div>
+
+        <section class="introducao">
+            <h2>Bem-vindo à Leitura Livre</h2>
+            <p>Descubra um mundo de histórias e conhecimento em nosso acervo digital de livros gratuitos. Na Leitura Livre, acreditamos que a leitura deve ser acessível a todos, sem barreiras financeiras.  Faça o download dos seus livros favoritos e embarque em uma jornada literária sem limites.</p>
+        </section>
+    </main>
+        <!-- Conteúdo principal -->
+        <main class="corpo">
+                <!-- Links para as páginas de detalhes dos livros -->
+        <div class="card">
+            <ul>
+                <li><a href="paginasDeLivros/niketche.html">Niketche</a></li>
+                <li><a href="paginasDeLivros/nos_matamos_o_cao_tinhoso.html">Nós matamos o cão tinhoso</a></li>
+                <li><a href="paginasDeLivros/introducao.html">Introdução a algoritmos e Progamação</a></li>
+                <li><a href="paginasDeLivros/cipriano.html">São Cipriano</a></li>
+                <li><a href="paginasDeLivros/idade.html">Idade Decisiva</a></li>      
+                <li><a href="paginasDeLivros/cripto.html">Introdução à Criptografia</a></li>
+                <li><a href="paginasDeLivros/mais.html">+ Esperto que o Diabo</a></li>
+                <li><a href="paginasDeLivros/quem.html">Quem Pensa Enriquece</a></li>
+                <li><a href="paginasDeLivros/terra_sonambula.html">Terra Sonâmbula</a></li>
+                <li><a href="paginasDeLivros/osetimo_juramento.html">O Sétimo Juramento</a></li>
+                <li><a href="paginasDeLivros/coragem.html">A Coragem de Não Agradar</a></li>
+                <li><a href="paginasDeLivros/el.html">El Kybalion</a></li>
+            </ul>
+        </div>
+        <div class="card">
+            <ul>
+                <li><a href="paginasDeLivros/fronteiras.html">Fronteiras do Pensamento</a></li>
+                <li><a href="paginasDeLivros/hackers.html">Hackers</a></li>
+                <li><a href="paginasDeLivros/pairico.html">Pai Rico, Pai Pobre</a></li>
+                <li><a href="paginasDeLivros/arrume.html">Arrume a sua cama</a></li>
+                <li><a href="paginasDeLivros/atomicas.html">Hábitos Atômicos</a></li>
+                <li><a href="paginasDeLivros/belo.html">Belo mundo, onde 
+                    você está</a></li>
+                <li><a href="paginasDeLivros/despertar.html">O Despertar de uma Nova Consciência</a></li>
+                <li><a href="paginasDeLivros/super.html">Supercerebro</a></li>
+                <li><a href="paginasDeLivros/pior.html">A pior Prisão do mundo</a></li>
+                <li><a href="paginasDeLivros/disney.html">O Jeito Disney de Encantar os Clientes</a></li>
+                <li><a href="paginasDeLivros/essencialiamo.html">Essencialismo</a></li>
+                <li><a href="paginasDeLivros/homem.html">O Homem mais rico da Babilonia</a></li>
+                <li><a href="paginasDeLivros/esperanca.html">O Poder da Esperança</a></li>
+                <li><a href="paginasDeLivros/oportunidades.html">Oportunidades Disfarçadas</a></li>
+                <li><a href="paginasDeLivros/olado.html">O Lado Bom da VIda</a></li>
+            </ul>
+        </div>
+        </main>
+        <!-- Rodapé -->
+        <footer>
+            <div class="container">
+               <p>&copy; 2024 Leitura Livre</p>
+          </div>
+        </footer>
+            <script src="js/script.js"></script> 
+    </body>
+</html>

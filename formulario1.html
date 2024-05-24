@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <style> 
+       *{
+           box-sizing: border-box;
+        }
+       body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            }
+            
+        header{
+            text-align: center;
+            font-family: fote;
+            background:  rgb(255, 230, 0); 
+            padding: 20px;
+            color: #0f0f0f;
+            position: sticky;
+            top: 0;
+              }
+        img{
+            width: 33px;
+            text-align: left;
+            }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color:  rgb(255, 237, 79);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .password-container {
+            position: relative;
+        }
+          /*estilo para senha com olho*/
+        .password-toggle {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+          /*estilo para a imagem de olho*/
+        .password-toggle img{
+          width:35px; 
+        }
+          /*estilo para butao de submisao*/
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #333;
+        }
+      /*estilo para mensagem de erro*/
+        .error-message {
+            color: red;
+            margin-top: 5px;
+        }
+        /*estilo para rodape*/
+        footer {
+    background-color:rgb(255, 230, 0);
+    color:  #333;
+    padding: 20px;
+    text-align: center;
+        }
+    </style>
+
+</head>
+  <!-- Cabeçalho -->
+<header class="header">
+    <h1>Leitura Livre</h1>
+    <a href="index.html"><img src="imagens/casa.png"></a>
+</header>
+<br>
+<body> 
+    <!--formulario de cadastro--> 
+<form action="/submit" method="POST" onsubmit="return validateForm()">
+    <h2>Criar conta</h2>
+    <label for="name">Nome:</label>
+    <input type="text" id="name" name="name" required>
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required>
+    <div class="password-container">
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+        <span class="password-toggle" onclick="togglePasswordVisibility()">
+          <img src="imagens/olho2.jpg" alt="Mostrar Senha" id="imagens/olho1.jpg">
+        </span>
+    </div>
+    <!--div com mensagem de error-->
+    <div id="error-message" class="error-message" style="display: none;">Por favor, preencha todos os campos.</div>
+    <input type="submit" value="Criar conta">
+</form>
+<br>
+ <!-- Rodapé -->
+ <footer>
+    <div class="container">
+       <p>&copy; 2024 Leitura Livre</p>
+  </div>
+</footer>
+<script>
+    //função para quando clicar na imagem mostrar e ocultar a senha 
+    function togglePasswordVisibility() {
+        var passwordInput = document.getElementById("password");
+        var eyeIcon = document.getElementById("imagens/olho1.jpg");
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            eyeIcon.src ="imagens/olho1.jpg";
+        } else {
+            passwordInput.type = "password";
+            eyeIcon.src = "imagens/olho2.jpg";
+        }
+    }
+    //função para validar o formulario
+    function validateForm() {
+        var name = document.getElementById("name").value;
+        var password = document.getElementById("password").value;
+        var errorMessage = document.getElementById("error-message");
+        if (name === "" || email === "" || password === "") {
+            errorMessage.style.display = "block";
+            return false;
+        } else {
+            errorMessage.style.display = "none";
+            return true;
+        }
+    }
+</script>
+</body>
+</html>
